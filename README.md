@@ -27,6 +27,8 @@ cd your-repo-directory
 Build the Docker image for the application:
 ```bash
 docker build -t  scinet0786/api-con .
+docker login
+docker push scinet0786/api-con
 ```
 
 ### 3. Set Up an Amazon EKS Cluster
@@ -44,7 +46,7 @@ kubectl apply -f deploy.yaml
 ### 5. Access the Application
 To find the external IP of the service:
 ```bash
-kubectl get service saint-service
+kubectl get service dave-service
 ```
 You can access the REST API using the provided IP address.
 
